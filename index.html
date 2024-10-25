@@ -1,0 +1,157 @@
+<!--Keerthana Reddy Singireddy
+   G01461198
+   Kotwal Sravya- G01454156
+   Adithya Reddy Koppula- G01460466
+   This is is the survey form with text fields, checkboxes, radio buttons
+   text area, raffle ,buttons based on the instructions provided in the 
+   assignment guide-->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KeerthanaSurveyFormPart2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Below is the link of  w3school stylesheets which help in using w3 libraries -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        .font-georgia-custom {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<!--This is is the body of the html page where survey data is collected 
+using various fields-->
+
+<body>
+    <!-- w3 center class puts the content in the center of the html page -->
+
+    <div class="w3-container w3-padding-32 w3-center">
+        <h1 class="font-georgia-custom">Student Survey Form</h1>
+    </div>
+    <form class="w3-container" method="POST">
+
+
+
+        <!-- Below are the required text fileds-->
+        <label for="first_name">First Name</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="text" id="first_name" name="first_name" required>
+            </div>
+        </div>
+
+        <label for="last_name">Last Name</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="text" id="last_name" name="last_name" required>
+            </div>
+        </div>
+
+        <label for="Street_Address">Street Address</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="text" id="Street_Address" name="Street_Address" required>
+            </div>
+        </div>
+
+
+        <label for="City">City</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="text" id="city" name="city" required>
+            </div>
+        </div>
+
+        <label for="state">State</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="text" id="state" name="state" required>
+            </div>
+        </div>
+
+        <label for="zip">Zip</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="text" id="zip" name="zip" required>
+            </div>
+        </div>
+
+        <label for="tel_no">Telephone no</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="tel" id="tel_no" name="tel_no" placeholder="123-456-7890"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
+        </div>
+
+        <label for="email_address">Email Address</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="email" id="mail" name="mail" required>
+            </div>
+        </div>
+
+        <label for="date_of_Survey">Date Of Survey</label>
+        <div class="w3-row">
+            <div class="w3-col s6">
+                <input class="w3-input w3-small" type="date" id="date_of_Survey" name="date_of_Survey" required>
+            </div>
+        </div>
+
+        <!--Checkboxes are defined below where the user is prompted to select what he liked most about the campus-->
+        <p><b>Please select what you liked most about the campus!</b></p>
+        <p><input type="checkbox" id="stud" name="stud" value="students">
+            students</p>
+        <p><input type="checkbox" id="loc_1" name="loc1" value="location">
+            location</p>
+        <p><input type="checkbox" id="camp_1" name="camp1" value="campus">
+            campus</p>
+        <p><input type="checkbox" id="atmos_1" name="atmos_1" value="atmosphere">
+            atmosphere</p>
+        <p><input type="checkbox" id="dorms_1" name="dorms_1" value="dorm rooms">
+            dorm rooms</p>
+        <p><input type="checkbox" id="sports_1" name="sports_1" value="sports">
+            sports</p>
+
+        <!-- radio buttons are defined below where the user is prompted to choose how they became interested 
+ in the university-->
+
+        <p><b>Please choose how you became interested in the university!</b></p>
+
+        <p><input type="radio" name="choice1" value="friends">
+            friends</p>
+        <p><input type="radio" name="choice1" value="television">
+            television</p>
+        <p><input type="radio" name="choice1" value="Internet">
+            Internet</p>
+        <p><input type="radio" name="choice1" value="Other">
+            Other</p>
+
+        <p><b>Please select the likelihood of you recommending this school to other prospective students</b></p>
+        <select name="likelihood" id="likelihood">
+            <option value="very likely">Very Likely</option>
+            <option value="likely">Likely</option>
+            <option value="unlikely">Unlikely</option>
+        </select>
+
+        <!-- this is additional textbox called raffle-->
+        <p><b> Please enter at least ten comma separated numbers ranging from 1 through100 in the Raffle field</b></p>
+        <input type="text" name="raffle_name" pattern="^(\s*(100|[1-9]?[0-9])\s*,){9,}\s*(100|[1-9]?[0-9])\s*$">
+</body>
+
+<p>Additional Comments</p>
+<textarea id="additional_comments" name="additional_comments" class="w3-input">
+</textarea>
+
+<button type="submit" value="Submit">Submit</button>
+<button type="reset" value="Cancel">Cancel</button>
+</form>
+</body>
+
+</html>
