@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keer-adi-srav-deployment
+  labels:
+    app: keer-adi-srav
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: keer-adi-srav
+  template:
+    metadata:
+      labels:
+        app: keer-adi-srav
+    spec:
+      containers:
+      - name: keer-adi-srav-container
+        image: keerthana762docker/keer-adi-srav:{{IMAGE_TAG}}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
